@@ -85,7 +85,7 @@ pub struct RefileArgs {
     /// Print the contents to stdout instead of pager
     #[arg(short, long, value_name = "NO PAGER")]
     pub no_pager: bool,
-    /// Name of the output file. If not given, ouptut is paged or printed to the standard output
+    /// Name of the output file. If not given, output is paged or printed to the standard output
     #[arg(value_name = "OUTPUT FILE")]
     pub output_file: Option<String>,
     /// Match the pattern strictly or loosely
@@ -120,7 +120,7 @@ pub struct SearchArgs {
 
 #[derive(Args, Debug, Clone)]
 pub struct SedArgs {
-    /// The tag to be substituded.
+    /// The tag to be substituted.
     /// Note that this command will perform a substitution only on an exact match.
     #[arg(value_name = "TAG")]
     pub tag: String,

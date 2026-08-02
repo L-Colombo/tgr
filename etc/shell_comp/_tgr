@@ -67,7 +67,7 @@ _arguments "${_arguments_options[@]}" : \
 '-h[Print help]' \
 '--help[Print help]' \
 ':pattern -- Pattern to find Org trees to refile:_default' \
-'::output_file -- Name of the output file. If not given, ouptut is paged or printed to the standard output:_default' \
+'::output_file -- Name of the output file. If not given, output is paged or printed to the standard output:_default' \
 && ret=0
 ;;
 (search)
@@ -91,7 +91,7 @@ _arguments "${_arguments_options[@]}" : \
 '--verbose[Print additional information about substitutions]' \
 '-h[Print help]' \
 '--help[Print help]' \
-':tag -- The tag to be substituded. Note that this command will perform a substitution only on an exact match:_default' \
+':tag -- The tag to be substituted. Note that this command will perform a substitution only on an exact match:_default' \
 ':replacement -- The replacement:_default' \
 && ret=0
 ;;
