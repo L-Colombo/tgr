@@ -1,7 +1,7 @@
 use pretty_assertions::assert_eq;
 use relative_path::RelativePath;
 use std::env::current_dir;
-use tagger::{
+use tgr::{
     config::Userconfig,
     io::{get_all_tags, get_tags_from_file},
 };

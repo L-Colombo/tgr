@@ -1243,24 +1243,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "tagger"
-version = "0.2.6"
-dependencies = [
- "bat",
- "clap",
- "clap_allgen",
- "grep",
- "minus",
- "pretty_assertions",
- "rayon",
- "relative-path",
- "serde",
- "serde_derive",
- "string-builder",
- "toml 1.1.4+spec-1.1.0",
-]
-
-[[package]]
 name = "termcolor"
 version = "1.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1302,6 +1284,24 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c13547615a44dc9c452a8a534638acdf07120d4b6847c8178705da06306a3057"
 dependencies = [
  "unicode-width",
+]
+
+[[package]]
+name = "tgr"
+version = "0.2.6"
+dependencies = [
+ "bat",
+ "clap",
+ "clap_allgen",
+ "grep",
+ "minus",
+ "pretty_assertions",
+ "rayon",
+ "relative-path",
+ "serde",
+ "serde_derive",
+ "string-builder",
+ "toml 1.1.4+spec-1.1.0",
 ]
 
 [[package]]

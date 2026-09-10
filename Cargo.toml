@@ -1,5 +1,5 @@
 [package]
-name = "tagger"
+name = "tgr"
 version = "0.2.6"
 edition = "2024"
 

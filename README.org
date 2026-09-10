@@ -1,6 +1,6 @@
-* Tagger
+* TGR
 
-Tagger is a small command line utility to explore and work with the tags of your [[https://orgmode.org/][Org-Mode]] files written in the Rust programming language.
+~tgr~ is a small command line utility to explore and work with the tags of your [[https://orgmode.org/][Org-Mode]] files written in the Rust programming language.
 Under the hood, it leverages the power of the [[https://github.com/BurntSushi/ripgrep][ripgrep]] and [[https://github.com/sharkdp/bat][bat]] crates.
 
 ** Rationale
@@ -9,44 +9,44 @@ I use Org-Mode every day in my academic job to take literature note and sketch n
 In doing so, I make extensive use of tags (thousands of them) spread over dozens of files.
 When dealing with so many tags, it often becomes cumbersome to find specific tags, list all of them, locate them inside files and producing a file which aggregates all the subheadings that contain a given tag.
 
-That's why I created ~tagger~, a fast and easy-to-use command line program to list, search, locate and refile based on a specific tag.
+That's why I created ~tgr~, a fast and easy-to-use command line program to list, search, locate and refile based on a specific tag.
 
 ** Installation
 
 Simply clone the project and run ~make install~ inside the project directory (after compilation it will prompt you for your sudo password).
-This will install ~tagger~, the ~man~ pages for ~tagger~ and its sub-commands and the completion scripts for zsh.
+This will install ~tgr~, the ~man~ pages for ~tgr~ and its sub-commands and the completion scripts for zsh.
 In the =etc/= directory there are completion scripts for other shells that, if needed, can be copied to the appropriate location or added to the Makefile.
 
 You will need the Rust toolchain to compile the program (you can get it [[https://www.rust-lang.org/tools/install][here]]).
 
 You might want to check the Makefile and tweak it to your liking before running ~make install~.
 
-Tagger can be uninstalled running in the project's directory ~make uninstall~.
+~tgr~ can be uninstalled running in the project's directory ~make uninstall~.
 
 ** Configuration
 
-The configuration is done in ~$HOME/.config/tagger/tagger.toml~.
+The configuration is done in ~$HOME/.config/tgr/tgr.toml~.
 
 In the configuration file the following options can be declared in toml format:
 
 | Property         | Type     | Description                                                                                                                             |
 |------------------+----------+-----------------------------------------------------------------------------------------------------------------------------------------|
-| org_directory    | String   | Specifies the directory in which tagger searches for files. If not given defaults to "~/Documents/Org/"                                     |
-| exclude_file     | String   | Specifies one file in which Tagger will not search for tags.                                                                            |
-| exclude_files    | [String] | Specifies an array of files in which Tagger will not search for tags.                                                                  |
-| exclude_pattern  | String   | All the files that match the regex pattern are not searched by tagger. Note backslashes need to be escaped (eg: "\\\\w+")               |
-| exclude_patterns | [String] | All the files that match at least one of the regex patterns in the list are not searched by Tagger. Note backslashes need to be escaped |
+| org_directory    | String   | Specifies the directory in which ~tgr~ searches for files. If not given defaults to "~/Documents/Org/"                                     |
+| exclude_file     | String   | Specifies one file in which ~tgr~ will not search for tags.                                                                            |
+| exclude_files    | [String] | Specifies an array of files in which ~tgr~ will not search for tags.                                                                  |
+| exclude_pattern  | String   | All the files that match the regex pattern are not searched by ~tgr~. Note backslashes need to be escaped (eg: "\\\\w+")               |
+| exclude_patterns | [String] | All the files that match at least one of the regex patterns in the list are not searched by ~tgr~. Note backslashes need to be escaped |
 
 
 ** Basic usage
 
-Once installed, Tagger provides the ~tgr~ command, which has the ~count~, ~locate~, ~refile~, ~search~, ~sed~, and ~tags~ subcommands.
+~tgr~ has the ~count~, ~locate~, ~refile~, ~search~, ~sed~, and ~tags~ subcommands.
 
 Generally, the syntax is ~tgr <subcommand> <options>~. To find out more, check the man pages or run ~tgr <subcommand> --help~.
 
 ** Other projects
 
-I have also created a wrapper to use Tagger directly from inside Emacs, which you can find [[https://github.com/L-Colombo/tagger-emacs-wrapper][here]].
+I have also created a wrapper to use ~tgr~ directly from inside Emacs, which you can find [[https://github.com/L-Colombo/tgr-emacs-wrapper][here]].
 
 ** Contribute
 Feel free to send pull requests or open issues.

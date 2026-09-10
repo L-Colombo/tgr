@@ -1,7 +1,7 @@
 use pretty_assertions::assert_eq;
 use relative_path::RelativePath;
 use std::env::current_dir;
-use tagger::{cli::SearchArgs, config::Userconfig, search::search_tags};
+use tgr::{cli::SearchArgs, config::Userconfig, search::search_tags};
 
 #[test]
 fn search_tags_in_all_files() {

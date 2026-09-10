@@ -25,7 +25,7 @@ impl Userconfig {
                 exit(1)
             }
         };
-        let cfg_file_name: String = format!("{home_dir}/.config/tagger/tagger.toml");
+        let cfg_file_name: String = format!("{home_dir}/.config/tgr/tgr.toml");
         let cfg_file = &std::fs::read_to_string(cfg_file_name);
 
         let data: Userconfig = match cfg_file {

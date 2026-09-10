@@ -1,8 +1,8 @@
 use clap::Parser;
 use clap_allgen::*;
 use std::process::exit;
-use tagger::cli::*;
-use tagger::commands::*;
+use tgr::cli::*;
+use tgr::commands::*;
 
 fn main() -> Result<(), minus::error::MinusError> {
     // Uncomment and run once to update the man pages and shell completions scripts
