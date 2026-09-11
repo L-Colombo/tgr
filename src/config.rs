@@ -68,7 +68,10 @@ impl Userconfig {
         let org_dir_entries = match read_dir(&self.org_directory) {
             Ok(entries) => entries,
             Err(e) => {
-                println!("Error {e}: cannot access your org directory");
+                eprintln!(
+                    "Error {}: cannot access your org directory `{}`",
+                    e, self.org_directory
+                );
                 exit(1)
             }
         };
