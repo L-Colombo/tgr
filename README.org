@@ -23,6 +23,37 @@ You might want to check the Makefile and tweak it to your liking before running 
 
 ~tgr~ can be uninstalled running in the project's directory ~make uninstall~.
 
+*** NixOS installation
+~tgr~ provides a ~default.nix~.
+To build locally you can run:
+
+#+begin_src bash
+$ nix-build -E 'let pkgs = import <nixpkgs> { }; in pkgs.callPackage ./default.nix {}'
+#+end_src
+
+To add it as a system package to your ~configuration.nix~ you can copy it as ~tgr.nix~ into the ~/etc/nixos~ directory and add the following to your configuration file:
+
+#+begin_src nix
+environment.systemPackages = 
+    with pkgs;
+    let
+        tgr = pkgs.callPackage /etc/nixos/tgr.nix { };
+    in
+    [
+        tgr
+        # your other system packages
+    ]
+#+end_src
+
+Then, you can run:
+
+#+begin_src bash
+$ sudo nixos-rebuild switch
+#+end_src
+
+This will download and build ~tgr~ and add it to ~$PATH~.
+It will also take care of installing the man pages and shell completion scripts for Zsh and Bash.
+
 ** Configuration
 
 The configuration is done in ~$HOME/.config/tgr/tgr.toml~.
