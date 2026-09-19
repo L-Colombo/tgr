@@ -18,6 +18,7 @@ pub fn refile(args: &RefileArgs, mut cfg: Userconfig) -> String {
 
     let mut all_matches: Vec<(String, Vec<usize>)> = vec![];
 
+    // PERF: consider to find a way to parallelize therse expensive io bound operations
     for file in files_to_search {
         let fname = match File::open(format!("{}{}", cfg.org_directory, &file)) {
             Ok(file) => file,
