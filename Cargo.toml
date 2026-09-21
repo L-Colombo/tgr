@@ -9,15 +9,15 @@ path = "src/main.rs"
 
 [dependencies]
 bat = { version = "0.26.1", default-features = false, features = ["regex-fancy"] }
-clap = { version = "4.6.6", features = ["derive"] }
+clap = { version = "4.6.7", features = ["derive"] }
 clap_allgen = "0.2.1"
 grep = "0.4.1"
-minus = { version = "5.7.2", features = ["regex", "search", "static_output"] }
+minus = { version = "5.8.0", features = ["regex", "search", "static_output"] }
 rayon = "1.12.0"
 serde = "1.0.229"
 serde_derive = "1.0.229"
 string-builder = "0.2.0"
-toml = "1.1.4"
+toml = "1.1.6"
 
 [dev-dependencies]
 pretty_assertions = "1.4.1"
