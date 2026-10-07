@@ -52,7 +52,7 @@ $ sudo nixos-rebuild switch
 #+end_src
 
 This will download and build ~tgr~ and add it to ~$PATH~.
-It will also take care of installing the man pages and shell completion scripts for Zsh and Bash.
+It will also take care of installing the man pages and shell completion scripts for ~Zsh~ and ~Bash~.
 
 ** Configuration
 
